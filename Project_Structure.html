@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painting 🎨</title>
+  <style>
+    body {
+      background: linear-gradient(106.5deg, rgba(255, 215, 185, 0.91) 23%, rgba(223, 159, 247, 0.8) 93%);
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    button {
+      display: block;
+      margin: 0 auto;
+      border: 1px solid plum;
+      background: white;
+      font-size: 20px;
+      border-radius: 6px;
+      padding: 10px 15px;
+      transition: all 150ms ease-in-out;
+    }
+
+    button:hover {
+      background: plum;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      margin: 10px 0;
+      font-size: 18px;
+    }
+
+    .theme-button {
+      background: black;
+      color: white;
+      padding: 5 8px;
+      border-radius: 30px;
+    }
+
+    .theme-button:hover {
+      color: black;
+      background: white;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 20px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .painting-intro-picture {
+      border-radius: 10px;
+      transition: all 150ms ease-in-out;
+    }
+
+    .painting-intro-picture:hover {
+      filter: contrast(80%);
+      transform: scale(1.1);
+    }
+
+    .grid {
+      margin: 15px 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: 20px;
+    }
+
+    .grid img {
+      width: 100%;
+      border-radius: 8px;
+      object-fit: cover;
+      transition: all 150ms ease-in-out;
+    }
+
+    .grid img:hover {
+      transform: scale(2);
+    }
+
+    .dark {
+      background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
+      color: white;
+    }
+
+    .dark .container {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .dark a {
+      color: plum;
+    }
+  </style>
+</head>
+
+<body>
+  <button class="theme-button">Change theme</button>
+  <div class="container">
+    <h1>🎨 Painting </h1>
+    <h2>My favorite hobby</h2>
+
+    <img
+      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/082/928/original/laura-adai-eDDVnYwaaks-unsplash.jpg?1684870536"
+      alt="jar with brushes" class="painting-intro-picture" />
+
+    <div class="grid">
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/082/925/original/laura-adai--wzRJ1Qqxno-unsplash.jpg?1684870503"
+        alt="brush" target="_blank" />
+
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/082/930/original/laura-adai-PzKIz6wjq1g-unsplash.jpg?1684870553"
+        alt="paint containers" target="_blank" />
+
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/082/926/original/laura-adai-2KJENWWR7ZA-unsplash.jpg?1684870515"
+        alt="paint" target="_blank" />
+
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/082/927/original/laura-adai-DxlVwCPS8NM-unsplash.jpg?1684870527"
+        alt="paint bottles" target="_blank" />
+
+    </div>
+    <p>
+      Painting, the expression of ideas and emotions, with the creation of certain aesthetic qualities, in a
+      two-dimensional visual language. The elements of this language—its shapes, lines, colors, tones, and textures—are
+      used in various ways to produce sensations of volume, space, movement, and light on a flat surface.
+    </p>
+    <br /><br />
+    📖 <a href="https://www.britannica.com/art/painting" aria-label="read more about painting" rel="noopener"
+      target="_blank">
+      <strong>Read on Britannica </strong>
+
+    </a>
+    <button class="applyButton">Apply now</button>
+  </div>
+
+  <footer>Code with 💜 by <a href="https://www.linkedin.com/in/catarinals/" aria-label="linkedin profile" rel="noopener"
+      target="_blank">
+      Catarina Santos</a>
+    with HTML, CSS and JavaScript
+  </footer>
+
+  <script>
+    function changeTheme() {
+      let body = document.querySelector("body");
+
+      if (body.classList.contains("dark")) {
+        body.classList.remove("dark");
+      } else {
+        body.classList.add("dark");
+      }
+    }
+
+    let themeButton = document.querySelector(".theme-button");
+    themeButton.addEventListener("click", changeTheme);
+
+    function applyNow() {
+      let name = prompt("What's your first name?");
+      let email = prompt("What is your e-mail?");
+      name = name.toLowerCase().trim();
+      email = email.toLocaleLowerCase().trim();
+
+      alert(`🖌 Thank you ${name}! We'll be in touch by e-mail.`);
+    }
+    let applyButton = document.querySelector(".applyButton");
+    applyButton.addEventListener("click", applyNow);
+
+  </script>
+</body>
+
+</html>
