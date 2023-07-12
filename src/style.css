@@ -1,0 +1,103 @@
+    body {
+      background: linear-gradient(106.5deg, rgba(255, 215, 185, 0.91) 23%, rgba(223, 159, 247, 0.8) 93%);
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    button {
+      display: block;
+      margin: 0 auto;
+      border: 1px solid plum;
+      background: white;
+      font-size: 20px;
+      border-radius: 6px;
+      padding: 10px 15px;
+      transition: all 150ms ease-in-out;
+    }
+
+    button:hover {
+      background: plum;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      margin: 10px 0;
+      font-size: 18px;
+    }
+
+    .theme-button {
+      background: black;
+      color: white;
+      padding: 5 8px;
+      border-radius: 30px;
+    }
+
+    .theme-button:hover {
+      color: black;
+      background: white;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 20px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .painting-intro-picture {
+      border-radius: 10px;
+      transition: all 150ms ease-in-out;
+    }
+
+    .painting-intro-picture:hover {
+      filter: contrast(80%);
+      transform: scale(1.1);
+    }
+
+    .grid {
+      margin: 15px 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: 20px;
+    }
+
+    .grid img {
+      width: 100%;
+      border-radius: 8px;
+      object-fit: cover;
+      transition: all 150ms ease-in-out;
+    }
+
+    .grid img:hover {
+      transform: scale(2);
+    }
+
+    .dark {
+      background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
+      color: white;
+    }
+
+    .dark .container {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .dark a {
+      color: plum;
+    }
